@@ -57,10 +57,18 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        gold: {
-          DEFAULT: "hsl(var(--gold))",
-          light: "hsl(var(--gold-light))",
-          dark: "hsl(var(--gold-dark))",
+        stellar: {
+          blue: "hsl(var(--stellar-blue))",
+          white: "hsl(var(--star-white))",
+        },
+        nebula: {
+          purple: "hsl(var(--nebula-purple))",
+        },
+        cosmic: {
+          gold: "hsl(var(--cosmic-gold))",
+        },
+        space: {
+          deep: "hsl(var(--deep-space))",
         },
       },
       borderRadius: {
@@ -130,8 +138,10 @@ export default {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        "gold-gradient": "linear-gradient(135deg, hsl(var(--gold)), hsl(var(--gold-light)))",
-        "dark-gradient": "linear-gradient(135deg, hsl(var(--primary)), hsl(0 0% 15%))",
+        "stellar-gradient": "var(--gradient-stellar)",
+        "nebula-gradient": "var(--gradient-nebula)",
+        "space-gradient": "var(--gradient-space)",
+        "cosmic-gradient": "var(--gradient-cosmic)",
       },
     },
   },
