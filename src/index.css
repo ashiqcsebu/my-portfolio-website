@@ -1,0 +1,201 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Premium Shopify Portfolio Design System - Luxury Black/White/Gold Palette */
+
+@layer base {
+  :root {
+    /* Core Background & Text */
+    --background: 0 0% 98%;
+    --foreground: 0 0% 8%;
+
+    /* Card Components */
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 8%;
+
+    /* Popover Components */
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 8%;
+
+    /* Primary - Luxury Black */
+    --primary: 0 0% 8%;
+    --primary-foreground: 0 0% 98%;
+
+    /* Secondary - Premium Gray */
+    --secondary: 0 0% 94%;
+    --secondary-foreground: 0 0% 8%;
+
+    /* Muted Tones */
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+
+    /* Accent - Luxury Gold */
+    --accent: 45 100% 51%;
+    --accent-foreground: 0 0% 8%;
+
+    /* Luxury Gold Variants */
+    --gold: 45 100% 51%;
+    --gold-light: 45 100% 65%;
+    --gold-dark: 45 100% 35%;
+
+    /* Premium Gradients */
+    --gradient-gold: linear-gradient(135deg, hsl(45 100% 51%), hsl(45 100% 65%));
+    --gradient-dark: linear-gradient(135deg, hsl(0 0% 8%), hsl(0 0% 15%));
+    --gradient-glass: linear-gradient(135deg, hsl(0 0% 100% / 0.1), hsl(0 0% 100% / 0.05));
+
+    /* Premium Shadows */
+    --shadow-luxury: 0 25px 50px -12px hsl(0 0% 0% / 0.25);
+    --shadow-gold-glow: 0 0 30px hsl(45 100% 51% / 0.3);
+    --shadow-glass: 0 8px 32px hsl(0 0% 0% / 0.12);
+
+    /* Animations */
+    --transition-luxury: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Glass Effects */
+    --glass-bg: hsl(0 0% 100% / 0.1);
+    --glass-border: hsl(0 0% 100% / 0.2);
+    --glass-backdrop: blur(20px);
+
+    /* Destructive */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    /* Borders & Inputs */
+    --border: 0 0% 90%;
+    --input: 0 0% 94%;
+    --ring: 45 100% 51%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark Mode - Inverted Luxury */
+    --background: 0 0% 8%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 12%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 8%;
+
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 45 100% 51%;
+    --accent-foreground: 0 0% 8%;
+
+    /* Dark Mode Gradients */
+    --gradient-dark: linear-gradient(135deg, hsl(0 0% 12%), hsl(0 0% 8%));
+    --gradient-glass: linear-gradient(135deg, hsl(0 0% 100% / 0.05), hsl(0 0% 100% / 0.02));
+
+    /* Dark Glass Effects */
+    --glass-bg: hsl(0 0% 100% / 0.05);
+    --glass-border: hsl(0 0% 100% / 0.1);
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 0 0% 15%;
+    --input: 0 0% 12%;
+    --ring: 45 100% 51%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Glass Morphism Effects */
+  .glass-card {
+    @apply bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl;
+  }
+
+  .glass-nav {
+    @apply bg-white/80 backdrop-blur-xl border-b border-white/20;
+  }
+
+  /* Luxury Button Variants */
+  .btn-gold {
+    @apply bg-gradient-to-r from-yellow-400 to-yellow-600 text-black font-semibold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1;
+  }
+
+  .btn-luxury {
+    @apply bg-black text-white border-2 border-black hover:bg-white hover:text-black font-semibold px-8 py-4 rounded-xl transition-all duration-300;
+  }
+
+  /* 3D Hover Effects */
+  .hover-lift {
+    @apply transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl;
+  }
+
+  .hover-tilt {
+    @apply transition-transform duration-300 hover:rotate-1 hover:scale-105;
+  }
+
+  /* Premium Animations */
+  .fade-in-up {
+    @apply opacity-0 translate-y-8 transition-all duration-700 ease-out;
+  }
+
+  .fade-in-up.animate {
+    @apply opacity-100 translate-y-0;
+  }
+
+  .parallax-bg {
+    @apply bg-fixed bg-center bg-cover;
+  }
+
+  /* Gold Accent Elements */
+  .gold-accent {
+    @apply text-yellow-500;
+  }
+
+  .gold-glow {
+    @apply shadow-lg shadow-yellow-500/20;
+  }
+
+  /* Premium Spacing */
+  .section-padding {
+    @apply py-20 px-6 md:px-12 lg:px-20;
+  }
+
+  .container-luxury {
+    @apply max-w-7xl mx-auto;
+  }
+}
