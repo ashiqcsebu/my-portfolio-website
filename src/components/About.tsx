@@ -1,7 +1,9 @@
-import { User, Code, TestTube, Award, Download, MapPin, Mail, Calendar } from 'lucide-react';
+import { User, Code, TestTube, Award, Download, MapPin, Mail, Calendar, X, ZoomIn } from 'lucide-react';
+import { useState } from 'react';
 import developerAvatar from '@/assets/developer-avatar.png';
 
 const About = () => {
+  const [selectedCertificate, setSelectedCertificate] = useState<typeof achievements[0] | null>(null);
   const skills = [
     {
       category: 'Frontend Development',
@@ -179,9 +181,12 @@ const About = () => {
           <h3 className="text-2xl font-bold text-center mb-8">Certifications & Achievements</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {achievements.map((achievement, index) => (
-              <div key={index} className="glass-card p-6 border border-primary/10 hover:border-primary/30 transition-all duration-300 hover:scale-105 group cursor-pointer">
+              <div key={index} className="glass-card p-6 border border-primary/10 hover:border-primary/30 transition-all duration-300 hover:scale-105 group">
                 {/* Certificate Image */}
-                <div className="relative mb-4 overflow-hidden rounded-xl">
+                <div 
+                  className="relative mb-4 overflow-hidden rounded-xl cursor-pointer"
+                  onClick={() => setSelectedCertificate(achievement)}
+                >
                   <img
                     src={achievement.image}
                     alt={`${achievement.title} Certificate`}
@@ -190,7 +195,11 @@ const About = () => {
                   <div className="absolute top-2 right-2 bg-primary/90 text-primary-foreground px-2 py-1 rounded text-xs font-medium uppercase">
                     {achievement.imageType}
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <div className="bg-primary/90 text-primary-foreground p-3 rounded-full">
+                      <ZoomIn className="w-6 h-6" />
+                    </div>
+                  </div>
                 </div>
 
                 {/* Certificate Info */}
@@ -208,6 +217,50 @@ const About = () => {
             ))}
           </div>
         </div>
+
+        {/* Certificate Modal */}
+        {selectedCertificate && (
+          <div 
+            className="fixed inset-0 bg-background/90 backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-fade-in"
+            onClick={() => setSelectedCertificate(null)}
+          >
+            <div 
+              className="relative max-w-4xl max-h-[90vh] animate-scale-in"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Close Button */}
+              <button
+                onClick={() => setSelectedCertificate(null)}
+                className="absolute -top-12 right-0 bg-primary text-primary-foreground p-2 rounded-full hover:bg-primary/80 transition-colors duration-200 z-10"
+              >
+                <X className="w-6 h-6" />
+              </button>
+
+              {/* Certificate Image */}
+              <div className="glass-card p-4 rounded-xl">
+                <img
+                  src={selectedCertificate.image}
+                  alt={`${selectedCertificate.title} Certificate`}
+                  className="w-full h-auto max-h-[80vh] object-contain rounded-lg"
+                />
+                
+                {/* Certificate Info */}
+                <div className="mt-4 text-center space-y-2">
+                  <h3 className="text-2xl font-bold text-foreground">{selectedCertificate.title}</h3>
+                  <p className="text-muted-foreground">{selectedCertificate.description}</p>
+                  <div className="flex items-center justify-center space-x-4">
+                    <span className="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm font-medium">
+                      {selectedCertificate.date}
+                    </span>
+                    <span className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium uppercase">
+                      {selectedCertificate.imageType}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );
