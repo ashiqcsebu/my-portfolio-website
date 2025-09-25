@@ -29,17 +29,23 @@ const About = () => {
     {
       title: 'ISTQB Foundation Level',
       description: 'Certified Software Testing Professional',
-      date: '2023'
+      date: '2023',
+      image: '/placeholder.svg', // Replace with your certificate PNG
+      imageType: 'png'
     },
     {
       title: 'AWS Cloud Practitioner',
       description: 'Amazon Web Services Certified',
-      date: '2023'
+      date: '2023',
+      image: '/placeholder.svg', // Replace with your certificate JPG
+      imageType: 'jpg'
     },
     {
       title: 'React Developer Certification',
       description: 'Advanced React Development',
-      date: '2022'
+      date: '2022',
+      image: '/placeholder.svg', // Replace with your certificate PNG
+      imageType: 'png'
     }
   ];
 
@@ -171,15 +177,33 @@ const About = () => {
         {/* Achievements Section */}
         <div className="mt-16 animate-fade-in-up">
           <h3 className="text-2xl font-bold text-center mb-8">Certifications & Achievements</h3>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {achievements.map((achievement, index) => (
-              <div key={index} className="glass-card p-6 text-center border border-primary/10 hover:border-primary/30 transition-colors duration-300">
-                <div className="w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Award className="w-6 h-6" />
+              <div key={index} className="glass-card p-6 border border-primary/10 hover:border-primary/30 transition-all duration-300 hover:scale-105 group cursor-pointer">
+                {/* Certificate Image */}
+                <div className="relative mb-4 overflow-hidden rounded-xl">
+                  <img
+                    src={achievement.image}
+                    alt={`${achievement.title} Certificate`}
+                    className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
+                  <div className="absolute top-2 right-2 bg-primary/90 text-primary-foreground px-2 py-1 rounded text-xs font-medium uppercase">
+                    {achievement.imageType}
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
-                <h4 className="text-lg font-semibold text-foreground mb-2">{achievement.title}</h4>
-                <p className="text-muted-foreground text-sm mb-2">{achievement.description}</p>
-                <span className="text-accent text-sm font-medium">{achievement.date}</span>
+
+                {/* Certificate Info */}
+                <div className="text-center space-y-3">
+                  <div className="w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center mx-auto">
+                    <Award className="w-6 h-6" />
+                  </div>
+                  <h4 className="text-lg font-semibold text-foreground">{achievement.title}</h4>
+                  <p className="text-muted-foreground text-sm">{achievement.description}</p>
+                  <span className="inline-block bg-accent/10 text-accent px-3 py-1 rounded-full text-sm font-medium">
+                    {achievement.date}
+                  </span>
+                </div>
               </div>
             ))}
           </div>
