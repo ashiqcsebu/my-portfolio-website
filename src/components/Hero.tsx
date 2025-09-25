@@ -77,7 +77,7 @@ const Hero = () => {
           {/* Quick Links */}
           <div className="flex justify-center items-center space-x-8 pt-8">
             <a
-              href="/resume.pdf"
+              href="https://drive.google.com/file/d/1ABC123XYZ456/view"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center text-muted-foreground hover:text-primary transition-colors duration-300"
@@ -103,6 +103,21 @@ const Hero = () => {
         <div className="absolute bottom-1/4 right-8 glass-card p-4 animate-float delay-700 hidden lg:block">
           <div className="text-accent font-bold">QA Certified</div>
           <div className="text-xs text-muted-foreground">ISTQB Foundation</div>
+        </div>
+
+        <div className="absolute top-1/2 left-4 glass-card p-4 animate-float delay-1000 hidden lg:block">
+          <div className="text-secondary font-bold">Node.js</div>
+          <div className="text-xs text-muted-foreground">Full Stack</div>
+        </div>
+
+        <div className="absolute top-1/3 right-12 glass-card p-4 animate-float delay-1200 hidden lg:block">
+          <div className="text-primary font-bold">TypeScript</div>
+          <div className="text-xs text-muted-foreground">Expert Level</div>
+        </div>
+
+        <div className="absolute bottom-1/3 left-16 glass-card p-4 animate-float delay-1400 hidden lg:block">
+          <div className="text-accent font-bold">AWS Cloud</div>
+          <div className="text-xs text-muted-foreground">Solutions Architect</div>
         </div>
       </div>
     </section>

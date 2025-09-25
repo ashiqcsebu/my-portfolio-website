@@ -3,6 +3,7 @@ import { ChevronLeft, ChevronRight, Star, Quote } from 'lucide-react';
 
 const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
 
   const testimonials = [
     {
@@ -11,6 +12,7 @@ const Testimonials = () => {
       role: 'CEO, Luxury Boutique',
       company: 'Elite Fashion Co.',
       avatar: '/api/placeholder/80/80',
+      screenshot: '/api/placeholder/400/300',
       rating: 5,
       text: 'Working with this developer transformed our online presence completely. Our Shopify store went from basic to absolutely stunning, and our conversion rates increased by 300%. The attention to detail and technical expertise is unmatched.',
       results: '$850K+ revenue increase',
@@ -22,6 +24,7 @@ const Testimonials = () => {
       role: 'Founder, TechGadgets Pro',
       company: 'Electronics Dropship',
       avatar: '/api/placeholder/80/80',
+      screenshot: '/api/placeholder/400/300',
       rating: 5,
       text: 'The dropshipping automation setup was flawless. Everything from supplier integration to order processing runs like clockwork. We\'ve scaled from 100 to 1000+ products without any technical issues.',
       results: '900% scaling achievement',
@@ -33,6 +36,7 @@ const Testimonials = () => {
       role: 'Marketing Director',
       company: 'Organic Skincare Brand',
       avatar: '/api/placeholder/80/80',
+      screenshot: '/api/placeholder/400/300',
       rating: 5,
       text: 'The store optimization work exceeded all expectations. Page load times improved dramatically, SEO rankings skyrocketed, and our mobile experience is now industry-leading. ROI was incredible.',
       results: '200% traffic increase',
@@ -44,6 +48,7 @@ const Testimonials = () => {
       role: 'Co-founder',
       company: 'Home Decor Hub',
       avatar: '/api/placeholder/80/80',
+      screenshot: '/api/placeholder/400/300',
       rating: 5,
       text: 'Creating our multi-vendor marketplace required complex custom development. The solution delivered was elegant, scalable, and user-friendly. Our vendors love the custom dashboard features.',
       results: '50+ active vendors',
@@ -55,6 +60,7 @@ const Testimonials = () => {
       role: 'Ecommerce Manager',
       company: 'Pet Paradise',
       avatar: '/api/placeholder/80/80',
+      screenshot: '/api/placeholder/400/300',
       rating: 5,
       text: 'The complete store overhaul delivered incredible results. Customer retention improved by 60%, cart abandonment dropped significantly, and our customer satisfaction scores are at an all-time high.',
       results: '60% retention boost',
@@ -70,11 +76,12 @@ const Testimonials = () => {
     setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
 
-  // Auto-rotate testimonials
+  // Auto-rotate testimonials (pause on hover)
   useEffect(() => {
+    if (isPaused) return;
     const interval = setInterval(nextTestimonial, 5000);
     return () => clearInterval(interval);
-  }, []);
+  }, [isPaused]);
 
   const currentTestimonial = testimonials[currentIndex];
 
@@ -98,52 +105,73 @@ const Testimonials = () => {
         </div>
 
         {/* Main Testimonial Card */}
-        <div className="max-w-4xl mx-auto">
-          <div className="glass-card p-8 md:p-12 text-center space-y-8 animate-fade-in-up">
-            {/* Quote Icon */}
-            <div className="flex justify-center">
-              <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center">
-                <Quote className="w-8 h-8 text-accent" />
+        <div className="max-w-6xl mx-auto">
+          <div 
+            className="glass-card p-8 md:p-12 space-y-8 animate-fade-in-up"
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
+          >
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              {/* Screenshot Image */}
+              <div className="order-2 md:order-1">
+                <div className="relative group">
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 rounded-xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
+                  <img 
+                    src={currentTestimonial.screenshot} 
+                    alt={`${currentTestimonial.name} testimonial screenshot`}
+                    className="relative w-full h-64 md:h-80 object-cover rounded-xl shadow-2xl group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
               </div>
-            </div>
 
-            {/* Rating */}
-            <div className="flex justify-center space-x-1">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-6 h-6 fill-accent text-accent" />
-              ))}
-            </div>
-
-            {/* Testimonial Text */}
-            <blockquote className="text-xl md:text-2xl leading-relaxed text-foreground italic">
-              "{currentTestimonial.text}"
-            </blockquote>
-
-            {/* Results Badge */}
-            <div className="inline-flex items-center px-6 py-3 bg-accent/10 text-accent rounded-full font-semibold">
-              {currentTestimonial.results}
-            </div>
-
-            {/* Client Info */}
-            <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-6">
-              <div className="flex items-center space-x-4">
-                <div className="w-16 h-16 bg-gradient-to-br from-accent/20 to-primary/20 rounded-full flex items-center justify-center">
-                  <div className="text-2xl font-bold text-accent">
-                    {currentTestimonial.name.split(' ').map(n => n[0]).join('')}
+              {/* Content */}
+              <div className="order-1 md:order-2 text-center md:text-left space-y-6">
+                {/* Quote Icon */}
+                <div className="flex justify-center md:justify-start">
+                  <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center">
+                    <Quote className="w-8 h-8 text-accent" />
                   </div>
                 </div>
-                <div className="text-left">
-                  <h4 className="font-semibold text-foreground">{currentTestimonial.name}</h4>
-                  <p className="text-muted-foreground">{currentTestimonial.role}</p>
-                  <p className="text-sm text-accent">{currentTestimonial.company}</p>
+
+                {/* Rating */}
+                <div className="flex justify-center md:justify-start space-x-1">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-6 h-6 fill-accent text-accent" />
+                  ))}
                 </div>
-              </div>
-              
-              <div className="hidden md:block w-px h-16 bg-border"></div>
-              
-              <div className="text-center md:text-left">
-                <p className="text-sm text-muted-foreground">Project Type</p>
-                <p className="font-medium text-foreground">{currentTestimonial.project}</p>
+
+                {/* Testimonial Text */}
+                <blockquote className="text-lg md:text-xl leading-relaxed text-foreground italic">
+                  "{currentTestimonial.text}"
+                </blockquote>
+
+                {/* Results Badge */}
+                <div className="inline-flex items-center px-6 py-3 bg-accent/10 text-accent rounded-full font-semibold">
+                  {currentTestimonial.results}
+                </div>
+
+                {/* Client Info */}
+                <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-6">
+                  <div className="flex items-center space-x-4">
+                    <div className="w-16 h-16 bg-gradient-to-br from-accent/20 to-primary/20 rounded-full flex items-center justify-center">
+                      <div className="text-2xl font-bold text-accent">
+                        {currentTestimonial.name.split(' ').map(n => n[0]).join('')}
+                      </div>
+                    </div>
+                    <div className="text-left">
+                      <h4 className="font-semibold text-foreground">{currentTestimonial.name}</h4>
+                      <p className="text-muted-foreground">{currentTestimonial.role}</p>
+                      <p className="text-sm text-accent">{currentTestimonial.company}</p>
+                    </div>
+                  </div>
+                  
+                  <div className="hidden sm:block w-px h-16 bg-border"></div>
+                  
+                  <div className="text-center sm:text-left">
+                    <p className="text-sm text-muted-foreground">Project Type</p>
+                    <p className="font-medium text-foreground">{currentTestimonial.project}</p>
+                  </div>
+                </div>
               </div>
             </div>
 
