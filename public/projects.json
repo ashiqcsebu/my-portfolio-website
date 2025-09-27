@@ -1,0 +1,222 @@
+[
+  {
+    "id": 1,
+    "title": "Deepseek-Under Development",
+    "category": "frontend",
+    "description": "An AI-powered DeepSeek clone that replicates intelligent conversation features with a modern UI. It provides users with real-time responses, seamless navigation, and an interactive experience similar to AI assistants.",
+    "image": "https://i.ibb.co/jk8bgJ9t/deepseek.png",
+    "technologies": ["Next.js", "React Hooks", "Tailwind CSS", "OpenAI API", "Vercel"],
+    "liveUrl": "https://deepseek-clone-woad.vercel.app/",
+    "githubUrl": "https://github.com/username/deepseek-clone",
+    "featured": true
+  },
+  {
+    "id": 2,
+    "title": "SWAP",
+    "category": "fullstack",
+    "description": "A mobile reselling platform that allows users to buy and sell second-hand devices. It includes product listings, search and filter functionality, user authentication, chat system, and integrated payment options for a secure marketplace experience.",
+    "image": "https://i.ibb.co/pPnC2cC/swap.jpg",
+    "technologies": ["React.js", "Node.js", "Express.js", "Firebase Authentication", "Cloud Firestore", "Stripe API", "Tailwind CSS"],
+    "liveUrl": "https://swap-resell-website.web.app/",
+    "githubUrl": "https://github.com/username/swap-resell",
+    "featured": true
+  },
+  {
+    "id": 3,
+    "title": "Edu Hive",
+    "category": "fullstack",
+    "description": "An online learning management system designed for students and teachers. Edu Hive offers live classes, interactive lessons, assignment submissions, progress tracking, and an engaging UI for easy navigation.",
+    "image": "https://i.ibb.co/mtvtFZ2/eduhive.png",
+    "technologies": ["React.js", "Firebase Hosting", "Firestore Database", "Material-UI", "React Router"],
+    "liveUrl": "https://edu-hive-5ffd0.web.app/",
+    "githubUrl": "https://github.com/username/edu-hive",
+    "featured": false
+  },
+  {
+    "id": 4,
+    "title": "Book Worm",
+    "category": "fullstack",
+    "description": "A book review website where users can explore books, write reviews, rate titles, and engage with a community of readers. Features include authentication, search and filter, and a clean user-friendly interface.",
+    "image": "https://i.ibb.co/gw3nWFC/Review.jpg",
+    "technologies": ["React.js", "Firebase", "React Context API", "Tailwind CSS", "React Router"],
+    "liveUrl": "https://service-review-c7a94.web.app/",
+    "githubUrl": "https://github.com/username/bookworm",
+    "featured": true
+  },
+  {
+    "id": 5,
+    "title": "Fitness Xpress",
+    "category": "frontend",
+    "description": "A workout monitoring application designed to help fitness enthusiasts track exercises, monitor progress, and visualize data with charts. It offers a responsive UI, authentication system, and real-time workout history logging.",
+    "image": "https://i.ibb.co/SBP7p0F/gym.jpg",
+    "technologies": ["React.js", "Chart.js", "Firebase Firestore", "Firebase Auth", "Bootstrap", "Netlify"],
+    "liveUrl": "https://workout-activity-tracker.netlify.app/",
+    "githubUrl": "https://github.com/username/fitness-xpress",
+    "featured": false
+  },
+  {
+    "id": 6,
+    "title": "Programming School",
+    "category": "frontend",
+    "description": "An interactive online quiz platform for programming learners. It includes timed quizzes, instant feedback, performance tracking, and a gamified experience to make coding practice fun and effective.",
+    "image": "https://i.ibb.co/2PRpPhg/quiz.png",
+    "technologies": ["React.js", "React Router", "Netlify Deployment", "CSS Modules", "Local Storage"],
+    "liveUrl": "https://programming-school-quiz-test.netlify.app/",
+    "githubUrl": "https://github.com/username/programming-school",
+    "featured": false
+  },
+  {
+    "id": 7,
+    "title": "Shopify Store Redesign",
+    "category": "shopify",
+    "description": "Complete redesign of a Shopify store with modern UI, improved UX, and optimized product layout to increase conversion rates and user engagement.",
+    "image": "https://i.ibb.co.com/BHr1ptjp/image-1.jpg",
+    "technologies": ["Shopify Theme", "Liquid Coding","JavaScript", "HTML", "CSS"],
+    "liveUrl": "https://crazystrainstees.com/",
+    "githubUrl": "#",
+    "featured": true
+  },
+  {
+    "id": 8,
+    "title": "Dropshipping Store Setup",
+    "category": "shopify",
+    "description": "Full store deisgn and setup of a dropshipping store including product sourcing, listing, pricing, shipping setup, and store configuration for seamless operations.",
+    "image": "https://i.ibb.co.com/p64cpjjv/image-2.jpg",
+    "technologies": ["Shopify", "Oberlo", "AliExpress", "Liquid", "SEO"],
+    "liveUrl": "https://q1b1kj-zf.myshopify.com/",
+    "githubUrl": "#",
+    "featured": true
+  },
+  {
+    "id": 9,
+    "title": "Shopify Store from  Scratch",
+    "category": "shopify",
+    "description": "Enhanced store SEO by optimizing product pages, meta tags, alt texts, and URLs to increase organic traffic and improve search engine rankings.",
+    "image": "https://i.ibb.co.com/PzYC6fcZ/image-3.jpg",
+    "technologies": ["Shopify", "SEO Tools", "Liquid", "Google Analytics"],
+    "liveUrl": "https://pkpouchenergy.com/",
+    "githubUrl": "#",
+    "featured": false
+  },
+  {
+    "id": 10,
+    "title": "Store Build & Manual Product Upload",
+    "category": "shopify",
+    "description": "Developed the store from scratch along with 1000+ product uploaded manually and catalog management with proper categorization, tagging, and pricing to enhance store organization and user experience.",
+    "image": "https://i.ibb.co.com/LDXpx5KK/image-4.jpg",
+    "technologies": ["Shopify", "CSV Import", "Liquid", "SEO"],
+    "liveUrl": "https://iconicluxellc.myshopify.com/",
+    "githubUrl": "#",
+    "featured": false
+  },
+  {
+    "id": 11,
+    "title": "Custom Single Product Store in Spanish",
+    "category": "shopify",
+    "description": "Built a fully customized Shopify store using Pagebuilder(Pagefly, Gempage) tailored to brand requirements, responsive design, interactive elements, and optimized performance manually translated in Spanish.",
+    "image": "https://i.ibb.co.com/93rDcLq8/image-5.jpg",
+    "technologies": ["Pagefly", "Liquid", "Gempage", "JavaScript"],
+    "liveUrl": "https://heikel.es/",
+    "githubUrl": "#",
+    "featured": true
+  },
+  {
+    "id": 12,
+    "title": "Wordpress to Shopify Store Migration",
+    "category": "shopify",
+    "description": "Migrated existing e-commerce stores to Shopify with full data transfer, theme adaptation, SEO preservation, and functional improvements.",
+    "image": "https://i.ibb.co.com/3gxZBKN/image-6.jpg",
+    "technologies": ["Shopify", "Liquid", "CSV Import", "SEO"],
+    "liveUrl": "https://casadeeva.com/",
+    "githubUrl": "#",
+    "featured": true
+  },
+  {
+    "id": 13,
+    "title": "Shopify Theme Customization",
+    "category": "shopify",
+    "description": "Customized pre-built Shopify themes to meet client branding, color scheme, typography, and feature requirements for a unique online store.",
+    "image": "https://i.ibb.co.com/bM1Jtjd5/image-7.jpg",
+    "technologies": ["Shopify", "Liquid", "CSS", "JavaScript"],
+    "liveUrl": "https://yg0kxu-sn.myshopify.com/",
+    "githubUrl": "#",
+    "featured": true
+  },
+  {
+    "id": 14,
+    "title": "Shopify Store from Scratch",
+    "category": "shopify",
+    "description": "Designed high-converting landing pages for Shopify stores with persuasive product displays, call-to-action buttons, and responsive layouts.",
+    "image": "https://i.ibb.co.com/q3y1nMDh/image-8.jpg",
+    "technologies": ["Shopify", "Liquid", "HTML", "CSS", "JavaScript"],
+    "liveUrl": "https://spacegoods.com/",
+    "githubUrl": "#",
+    "featured": false
+  },
+  {
+    "id": 15,
+    "title": "Store Build & Manual Product Upload",
+    "category": "shopify",
+    "description": "Improved store loading speed and performance by optimizing images, code, and apps for better user experience and higher SEO ranking.",
+    "image": "https://i.ibb.co.com/XxY29Snw/image-9.jpg",
+    "technologies": ["Theme Customization", "Liquid", "Performance Tools", "SEO"],
+    "liveUrl": "https://primalqueen.com/",
+    "githubUrl": "#",
+    "featured": false
+  },
+  {
+    "id": 16,
+    "title": "Shopify Store Redesign",
+    "category": "shopify",
+    "description": "Integrated essential Shopify apps for email marketing, reviews, analytics, and dropshipping to enhance store functionality and business operations.",
+    "image": "https://i.ibb.co.com/ZyLvF55/image-10.jpg",
+    "technologies": ["Shopify", "Liquid", "Apps", "API Integration"],
+    "liveUrl": "https://tfstairs.com/",
+    "githubUrl": "#",
+    "featured": true
+  },
+  {
+    "id": 17,
+    "title": "Store Build & Manual Product Upload",
+    "category": "shopify",
+    "description": "Configured secure payment gateways including Stripe, PayPal, and local options to ensure smooth checkout experience for customers.",
+    "image": "https://i.ibb.co.com/BHm9PWqP/image-11.jpg",
+    "technologies": ["Shopify", "Payment APIs", "Liquid"],
+    "liveUrl": "https://maisondorigine.fr/",
+    "githubUrl": "#",
+    "featured": true
+  },
+  {
+    "id": 18,
+    "title": "Multilingual Shopify Store(German & English)",
+    "category": "shopify",
+    "description": "Developed multilingual Shopify stores to target international customers with proper language switcher, translation, and currency support.",
+    "image": "https://i.ibb.co.com/nsc41qTJ/image-12.jpg",
+    "technologies": ["Shopify", "Liquid", "Apps", "SEO"],
+    "liveUrl": "https://www.palace-home.ch/",
+    "githubUrl": "#",
+    "featured": false
+  },
+  {
+    "id": 19,
+    "title": "Bilingual Shopify Store(German & English)",
+    "category": "shopify",
+    "description": "Created promotional and marketing pages for campaigns, product launches, and seasonal offers with visually appealing layouts.",
+    "image": "https://i.ibb.co.com/SDDrDngB/imahe-13.jpg",
+    "technologies": [ "Liquid Coding", "Theme Customization", "JavaScript"],
+    "liveUrl": "https://makya.de/",
+    "githubUrl": "#",
+    "featured": false
+  },
+  {
+    "id": 20,
+    "title": "Solar Energy Shopify Store",
+    "category": "shopify",
+    "description": "Set up advanced Shopify analytics and reporting dashboards to monitor sales, traffic, and conversions for data-driven business decisions.",
+    "image": "https://i.ibb.co.com/S4LFzwqz/image-14.jpg",
+    "technologies": ["Shopify", "Liquid", "Custom Coding", "SEO"],
+    "liveUrl": "https://soluxious.com/",
+    "githubUrl": "#",
+    "featured": false
+  }
+]

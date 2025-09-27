@@ -144,7 +144,7 @@
   }
 
   .glass-nav {
-    @apply bg-white/80 backdrop-blur-xl border-b border-white/20;
+    @apply bg-[#1C0830] backdrop-blur-xl border-b border-white/20;
   }
 
   /* Luxury Button Variants */

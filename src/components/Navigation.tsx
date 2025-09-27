@@ -1,3 +1,4 @@
+import * as React from "react";
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
@@ -16,9 +17,9 @@ const Navigation = () => {
 
   const navItems = [
     { href: '#home', label: 'Home' },
-    { href: '#about', label: 'About' },
-    { href: '#services', label: 'Services' },
-    { href: '#portfolio', label: 'Portfolio' },
+    { href: '#about', label: 'About Me' },
+    { href: '#projects', label: 'Services' },
+    // { href: '#portfolio', label: 'Portfolio' },
     { href: '#testimonials', label: 'Testimonials' },
     { href: '#contact', label: 'Contact' },
   ];
@@ -33,8 +34,9 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="text-2xl font-bold">
-            <span className="text-primary">Shopify</span>
-            <span className="text-accent">Pro</span>
+            <span className="text-primary">Ashiqul </span>
+            <span className="text-accent">Islam </span>
+                <span className="text-primary">Shabu</span>
           </div>
 
           {/* Desktop Navigation */}

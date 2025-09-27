@@ -1,247 +1,195 @@
-import { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, Star, Quote } from 'lucide-react';
+import { useState, useEffect, useCallback } from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+import review1 from '../assets/reviews/1.png';
+import review2 from '../assets/reviews/2.png';
+import review3 from '../assets/reviews/3.png';
+import review4 from '../assets/reviews/4.png';
+import review5 from '../assets/reviews/5.png';
+import review6 from '../assets/reviews/6.png';
+import review7 from '../assets/reviews/7.png';
+import review8 from '../assets/reviews/8.png';
+import review9 from '../assets/reviews/9.png';
+import review10 from '../assets/reviews/10.png';
+import review11 from '../assets/reviews/11.png';
+import review12 from '../assets/reviews/12.png';
+
+const screenshots = [
+  review1, review2, review3, review4, review5, review6,
+  review7, review8, review9, review10, review11, review12
+];
 
 const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
 
-  const testimonials = [
-    {
-      id: 1,
-      name: 'Sarah Johnson',
-      role: 'CEO, Luxury Boutique',
-      company: 'Elite Fashion Co.',
-      avatar: '/api/placeholder/80/80',
-      screenshot: '/api/placeholder/400/300',
-      rating: 5,
-      text: 'Working with this developer transformed our online presence completely. Our Shopify store went from basic to absolutely stunning, and our conversion rates increased by 300%. The attention to detail and technical expertise is unmatched.',
-      results: '$850K+ revenue increase',
-      project: 'Complete store redesign'
-    },
-    {
-      id: 2,
-      name: 'Michael Chen',
-      role: 'Founder, TechGadgets Pro',
-      company: 'Electronics Dropship',
-      avatar: '/api/placeholder/80/80',
-      screenshot: '/api/placeholder/400/300',
-      rating: 5,
-      text: 'The dropshipping automation setup was flawless. Everything from supplier integration to order processing runs like clockwork. We\'ve scaled from 100 to 1000+ products without any technical issues.',
-      results: '900% scaling achievement',
-      project: 'Dropshipping automation'
-    },
-    {
-      id: 3,
-      name: 'Emily Rodriguez',
-      role: 'Marketing Director',
-      company: 'Organic Skincare Brand',
-      avatar: '/api/placeholder/80/80',
-      screenshot: '/api/placeholder/400/300',
-      rating: 5,
-      text: 'The store optimization work exceeded all expectations. Page load times improved dramatically, SEO rankings skyrocketed, and our mobile experience is now industry-leading. ROI was incredible.',
-      results: '200% traffic increase',
-      project: 'Performance optimization'
-    },
-    {
-      id: 4,
-      name: 'David Kim',
-      role: 'Co-founder',
-      company: 'Home Decor Hub',
-      avatar: '/api/placeholder/80/80',
-      screenshot: '/api/placeholder/400/300',
-      rating: 5,
-      text: 'Creating our multi-vendor marketplace required complex custom development. The solution delivered was elegant, scalable, and user-friendly. Our vendors love the custom dashboard features.',
-      results: '50+ active vendors',
-      project: 'Multi-vendor marketplace'
-    },
-    {
-      id: 5,
-      name: 'Lisa Thompson',
-      role: 'Ecommerce Manager',
-      company: 'Pet Paradise',
-      avatar: '/api/placeholder/80/80',
-      screenshot: '/api/placeholder/400/300',
-      rating: 5,
-      text: 'The complete store overhaul delivered incredible results. Customer retention improved by 60%, cart abandonment dropped significantly, and our customer satisfaction scores are at an all-time high.',
-      results: '60% retention boost',
-      project: 'UX/UI redesign'
-    }
-  ];
+const testimonials = [ 
+  { 
+    id: 1, 
+    name: 'georgemamalls', 
+    location: 'Los Angeles, USA', 
+    screenshot: screenshots[0], 
+    text: 'We built a complete Shopify store with dropshipping functionality, custom theme design, product upload automation, and payment gateway integration to ensure smooth operations and a professional, engaging customer shopping experience.' 
+  },
+  { 
+    id: 2, 
+    name: 'heitorcarv', 
+    location: 'Toronto, Canada', 
+    screenshot: screenshots[1], 
+    text: 'The project involved setting up advanced dropshipping automation, connecting multiple suppliers, optimizing inventory synchronization, and implementing payment gateways to deliver a seamless e-commerce store with minimal manual involvement.' 
+  },
+  { 
+    id: 3, 
+    name: 'trammells24', 
+    location: 'Madrid, Spain', 
+    screenshot: screenshots[2], 
+    text: 'We focused on improving store speed, mobile responsiveness, SEO performance, and checkout flow, making the Shopify store significantly faster, user-friendly, and optimized for both search engines and customer conversion.' 
+  },
+  { 
+    id: 4, 
+    name: 'wittwalls', 
+    location: 'Berlin, Germany', 
+    screenshot: screenshots[3], 
+    text: 'The project included building a multi-vendor marketplace with vendor dashboards, commission management, order tracking, and storefront customization, allowing multiple sellers to operate efficiently within one centralized e-commerce platform.' 
+  },
+  { 
+    id: 5, 
+    name: 'thomiegroup', 
+    location: 'New York, USA', 
+    screenshot: screenshots[4], 
+    text: 'We redesigned and overhauled an existing Shopify store, creating a modern layout, advanced theme customization, improved navigation, and integrated analytics to help the client scale their e-commerce business successfully.' 
+  },
+  { 
+    id: 6, 
+    name: 'ysappliences', 
+    location: 'Zurich, Switzerland', 
+    screenshot: screenshots[5], 
+    text: 'This project centered around automating product uploads, managing large catalogs, enhancing store security, and integrating customer engagement tools to deliver a high-performing Shopify store tailored to Swiss market needs.' 
+  },
+  { 
+    id: 7, 
+    name: 'olorunfemiozomo', 
+    location: 'Auckland, New Zealand', 
+    screenshot: screenshots[6], 
+    text: 'We developed a fully functional dropshipping store connected with local and international suppliers, streamlined logistics automation, optimized checkout, and implemented responsive design for customers shopping on mobile devices.' 
+  },
+  { 
+    id: 8, 
+    name: 'ffeg2324f', 
+    location: 'Amsterdam, Netherlands', 
+    screenshot: screenshots[7], 
+    text: 'The project improved store performance by enhancing user experience, refining theme elements, reducing checkout friction, and integrating custom apps to optimize product recommendations and improve customer retention strategies.' 
+  },
+  { 
+    id: 9, 
+    name: 'cuallxre', 
+    location: 'Sydney, Australia', 
+    screenshot: screenshots[8], 
+    text: 'We created a marketplace store supporting multiple vendors, subscription billing, advanced reporting, and responsive dashboards, ensuring seamless management for sellers and a smooth, professional shopping journey for buyers.' 
+  },
+  { 
+    id: 10, 
+    name: 'jnordstromse', 
+    location: 'San Francisco, USA', 
+    screenshot: screenshots[9], 
+    text: 'This project involved a complete Shopify revamp with custom theme development, app integration, analytics setup, and checkout enhancements to boost customer engagement and overall e-commerce store performance.' 
+  },
+  { 
+    id: 11, 
+    name: 'blazepowerport', 
+    location: 'Munich, Germany', 
+    screenshot: screenshots[10], 
+    text: 'We developed a wholesale-ready Shopify store with tiered pricing, B2B features, bulk product import, and secure checkout, ensuring the client could serve both retail and wholesale customers effectively.' 
+  },
+  { 
+    id: 12, 
+    name: 'ad_group1', 
+    location: 'Vancouver, Canada', 
+    screenshot: screenshots[11], 
+    text: 'The store was built with dropshipping automation, supplier integration, product import customization, and inventory synchronization, ensuring the business could scale effectively with minimal manual intervention from the client.' 
+  },
+];
 
-  const nextTestimonial = () => {
+
+  const nextTestimonial = useCallback(() => {
     setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-  };
+  }, [testimonials.length]);
 
   const prevTestimonial = () => {
     setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
 
-  // Auto-rotate testimonials (pause on hover)
+  // Auto-slide every 5 seconds
   useEffect(() => {
     if (isPaused) return;
     const interval = setInterval(nextTestimonial, 5000);
     return () => clearInterval(interval);
-  }, [isPaused]);
-
-  const currentTestimonial = testimonials[currentIndex];
+  }, [isPaused, nextTestimonial]);
 
   return (
-    <section id="testimonials" className="section-padding bg-gradient-to-b from-secondary/30 to-background">
-      <div className="container-luxury">
-        {/* Section Header */}
-        <div className="text-center space-y-6 mb-16 animate-fade-in-up">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-accent/10 text-accent text-sm font-medium">
-            ⭐ Client Success Stories
-          </div>
-          
-          <h2 className="text-4xl md:text-5xl font-bold">
-            What <span className="text-accent">Clients Say</span> About My Work
-          </h2>
-          
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Real feedback from real clients who've experienced significant growth and success 
-            with their Shopify stores.
-          </p>
-        </div>
-
-        {/* Main Testimonial Card */}
-        <div className="max-w-6xl mx-auto">
-          <div 
-            className="glass-card p-8 md:p-12 space-y-8 animate-fade-in-up"
-            onMouseEnter={() => setIsPaused(true)}
-            onMouseLeave={() => setIsPaused(false)}
-          >
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              {/* Screenshot Image */}
-              <div className="order-2 md:order-1">
-                <div className="relative group">
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 rounded-xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-                  <img 
-                    src={currentTestimonial.screenshot} 
-                    alt={`${currentTestimonial.name} testimonial screenshot`}
-                    className="relative w-full h-64 md:h-80 object-cover rounded-xl shadow-2xl group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-              </div>
-
-              {/* Content */}
-              <div className="order-1 md:order-2 text-center md:text-left space-y-6">
-                {/* Quote Icon */}
-                <div className="flex justify-center md:justify-start">
-                  <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center">
-                    <Quote className="w-8 h-8 text-accent" />
-                  </div>
-                </div>
-
-                {/* Rating */}
-                <div className="flex justify-center md:justify-start space-x-1">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-6 h-6 fill-accent text-accent" />
-                  ))}
-                </div>
-
-                {/* Testimonial Text */}
-                <blockquote className="text-lg md:text-xl leading-relaxed text-foreground italic">
-                  "{currentTestimonial.text}"
-                </blockquote>
-
-                {/* Results Badge */}
-                <div className="inline-flex items-center px-6 py-3 bg-accent/10 text-accent rounded-full font-semibold">
-                  {currentTestimonial.results}
-                </div>
-
-                {/* Client Info */}
-                <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-6">
-                  <div className="flex items-center space-x-4">
-                    <div className="w-16 h-16 bg-gradient-to-br from-accent/20 to-primary/20 rounded-full flex items-center justify-center">
-                      <div className="text-2xl font-bold text-accent">
-                        {currentTestimonial.name.split(' ').map(n => n[0]).join('')}
-                      </div>
-                    </div>
-                    <div className="text-left">
-                      <h4 className="font-semibold text-foreground">{currentTestimonial.name}</h4>
-                      <p className="text-muted-foreground">{currentTestimonial.role}</p>
-                      <p className="text-sm text-accent">{currentTestimonial.company}</p>
-                    </div>
-                  </div>
-                  
-                  <div className="hidden sm:block w-px h-16 bg-border"></div>
-                  
-                  <div className="text-center sm:text-left">
-                    <p className="text-sm text-muted-foreground">Project Type</p>
-                    <p className="font-medium text-foreground">{currentTestimonial.project}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Navigation */}
-            <div className="flex items-center justify-center space-x-4 pt-8">
-              <button
-                onClick={prevTestimonial}
-                className="p-3 bg-card rounded-full hover:bg-accent hover:text-accent-foreground transition-all duration-300 hover:scale-110"
-              >
-                <ChevronLeft className="w-5 h-5" />
-              </button>
-              
-              {/* Dots Indicator */}
-              <div className="flex space-x-2">
-                {testimonials.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentIndex(index)}
-                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                      index === currentIndex ? 'bg-accent' : 'bg-muted'
-                    }`}
-                  />
-                ))}
-              </div>
-              
-              <button
-                onClick={nextTestimonial}
-                className="p-3 bg-card rounded-full hover:bg-accent hover:text-accent-foreground transition-all duration-300 hover:scale-110"
-              >
-                <ChevronRight className="w-5 h-5" />
-              </button>
-            </div>
-          </div>
-        </div>
-
-        {/* Stats Row */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 animate-fade-in-up">
-          <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-accent">50+</div>
-            <div className="text-muted-foreground">Happy Clients</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-accent">$8M+</div>
-            <div className="text-muted-foreground">Revenue Generated</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-accent">99%</div>
-            <div className="text-muted-foreground">Satisfaction Rate</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-accent">24/7</div>
-            <div className="text-muted-foreground">Support Available</div>
-          </div>
-        </div>
-
-        {/* CTA Section */}
-        <div className="text-center mt-16 animate-fade-in-up">
-          <div className="max-w-2xl mx-auto space-y-6">
-            <h3 className="text-2xl md:text-3xl font-bold">
-              Ready to Become the Next <span className="text-accent">Success Story</span>?
-            </h3>
-            <p className="text-muted-foreground">
-              Join these successful entrepreneurs and start building your premium Shopify store today.
-            </p>
-            <a
-              href="#contact"
-              className="inline-flex items-center bg-accent text-accent-foreground px-8 py-4 rounded-xl font-semibold hover:scale-105 transition-transform duration-300"
+    <section id='testimonials' className="section-padding bg-gradient-to-b from-secondary/30 to-background">
+      <div className="container-luxury max-w-6xl mx-auto">
+        {/* Testimonial Card */}
+        <div
+          className="glass-card p-8 md:p-12 space-y-8"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+        >
+          <div className="relative overflow-hidden rounded-xl">
+            {/* Slide wrapper */}
+            <div
+              className="flex transition-transform duration-700 ease-in-out"
+              style={{ transform: `translateX(-${currentIndex * 100}%)` }}
             >
-              Let's Build Your Store
-            </a>
+              {testimonials.map((t) => (
+                <div
+                  key={t.id}
+                  className="flex-shrink-0 w-full grid md:grid-cols-2 gap-8 items-center"
+                >
+                  <img
+                    src={t.screenshot}
+                    alt={`${t.name} testimonial`}
+                    className="w-full h-64 md:h-80 object-cover rounded-xl shadow-2xl"
+                  />
+                  <div>
+                    <h3 className="text-xl font-bold"> <span className='text-[#608FEC] text-lg'>Client Username: </span>{t.name}</h3>
+                      <h4 className="text-md font-bold"><span className='text-[#608FEC] text-md'>Address: </span>{t.location}</h4>
+                    <p className="text-muted-foreground mt-2  }} "style={{ textAlign: "justify"}} >
+                      
+                      <span className='text-[#608FEC] text-md font-semibold'>Project Details: </span> {t.text}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Navigation */}
+          <div className="flex items-center justify-center space-x-4 pt-8">
+            <button
+              onClick={prevTestimonial}
+              className="p-3 bg-card rounded-full hover:bg-accent hover:text-accent-foreground transition-all duration-300"
+            >
+              <ChevronLeft className="w-5 h-5" />
+            </button>
+
+            {/* Dots */}
+            <div className="flex space-x-2">
+              {testimonials.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentIndex(index)}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    index === currentIndex ? 'bg-accent' : 'bg-muted'
+                  }`}
+                />
+              ))}
+            </div>
+
+            <button
+              onClick={nextTestimonial}
+              className="p-3 bg-card rounded-full hover:bg-accent hover:text-accent-foreground transition-all duration-300"
+            >
+              <ChevronRight className="w-5 h-5" />
+            </button>
           </div>
         </div>
       </div>

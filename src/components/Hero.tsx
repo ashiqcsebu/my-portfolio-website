@@ -1,8 +1,15 @@
 import { ArrowRight, Download, Code, TestTube } from 'lucide-react';
+import { Typewriter } from 'react-simple-typewriter';
 
 const Hero = () => {
+  const handleDone = () => console.log(`Done after 5 loops!`);
+  const handleType = () => console.log(`Typing...`);
+
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section
+      id="home"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden"
+    >
       {/* Floating Elements */}
       <div className="absolute top-20 left-10 w-20 h-20 bg-primary/10 rounded-full blur-xl animate-float"></div>
       <div className="absolute bottom-20 right-10 w-32 h-32 bg-accent/5 rounded-full blur-2xl animate-float delay-300"></div>
@@ -12,116 +19,162 @@ const Hero = () => {
         <div className="text-center space-y-8 animate-fade-in-up">
           {/* Badge */}
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium backdrop-blur-sm">
-            ✨ Full Stack Developer & QA Engineer
-          </div>
-          
-          {/* Main Heading */}
-          <div className="space-y-4">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
-              Hi, I'm <span className="text-primary">Alex Johnson</span>
-            </h1>
-            
-            <h2 className="text-2xl md:text-4xl font-semibold">
-              I Build <span className="bg-stellar-gradient bg-clip-text text-transparent">
-                Digital Experiences
-              </span> & Ensure <span className="text-acc">Quality</span>
-            </h2>
-            
-            <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-              Passionate full-stack developer and QA engineer specializing in React, Node.js, 
-              and comprehensive testing strategies. I create robust applications and ensure 
-              they deliver exceptional user experiences.
-            </p>
+            ✨ Web Developer & Shopify Expert
           </div>
 
-          {/* Stats */}
+          {/* Main Heading */}
+          <div className="space-y-4">
+            <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold leading-tight">
+              Hi, I'm <span className="bg-stellar-gradient bg-clip-text text-transparent">Ashiqul Islam</span>
+            </h1>
+
+            <h4
+              className="lg:text-3xl md:text-3xl text-2xl font-semibold monoster-fonts mt-4 
+               flex flex-col lg:flex-row lg:items-center justify-center lg:justify-start text-center lg:text-left"
+            >
+              <span className="flex items-center justify-center lg:justify-start">
+                A{' '}
+                <span className="bg-stellar-gradient bg-clip-text text-transparent ml-2">
+                  Shopify Expert
+                </span>
+              </span>
+              <span
+                className="lg:text-3xl md:text-2xl text-2xl font-semibold monoster-fonts 
+                 lg:ml-5 mt-2 lg:mt-0 inline-block lg:w-auto w-full"
+              >
+                & provide{' '}
+                <Typewriter
+                  words={[
+                    'Complete Store Setup.',
+                    'Professional Theme Customization.',
+                    'Complete Dropshipping Solutions',
+                    'Seamless App Integration.',
+                    'Advanced Store Optimization.',
+                    'Custom Liquid Development.'
+                  ]}
+                  loop={true}
+                  cursor
+                  cursorStyle="|"
+                  typeSpeed={70}
+                  deleteSpeed={50}
+                  delaySpeed={1500}
+                  onLoopDone={handleDone}
+                  onType={handleType}
+                />
+              </span>
+            </h4>
+          </div>
+
+          <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+            Skilled in Shopify store setup, domain & payment integration, shipping & tax configuration, dropshipping (AliExpress, Oberlo, DSers, Spocket, CJ Dropshipping), theme customization, Liquid development, bulk product upload, data management, app integration, SEO, performance optimization, and store maintenance. I deliver fully functional, responsive, and high-converting Shopify stores tailored to client needs.
+          </p>
+        </div>
+
+        {/* Stats */}
+        <section>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 py-8 max-w-4xl mx-auto">
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary">50+</div>
-              <div className="text-sm text-muted-foreground">Projects Completed</div>
+              <div className="text-3xl font-bold text-primary">53+</div>
+              <div className="text-sm text-muted-foreground">Projects Delivered</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary">3+</div>
+              <div className="text-3xl font-bold text-primary">1.5+</div>
               <div className="text-sm text-muted-foreground">Years Experience</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary">99%</div>
-              <div className="text-sm text-muted-foreground">Bug Detection Rate</div>
+              <div className="text-3xl font-bold text-primary">95%</div>
+              <div className="text-sm text-muted-foreground">Customer Satisfaction</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-primary">24/7</div>
-              <div className="text-sm text-muted-foreground">Availability</div>
+              <div className="text-sm text-muted-foreground">Quick Response</div>
             </div>
-          </div>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
-              href="#projects"
-              className="group bg-primary text-primary-foreground px-8 py-4 rounded-xl font-semibold hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center"
-            >
-              <Code className="mr-2 w-5 h-5" />
-              View My Work
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-            </a>
             
-            <a
-              href="#contact"
-              className="group border-2 border-accent text-accent px-8 py-4 rounded-xl font-semibold hover:bg-accent hover:text-accent-foreground transition-all duration-300 flex items-center"
-            >
-              <TestTube className="mr-2 w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
-              Let's Work Together
-            </a>
           </div>
 
-          {/* Quick Links */}
-          <div className="flex justify-center items-center space-x-8 pt-8">
-            <a
-              href="https://drive.google.com/file/d/1ABC123XYZ456/view"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center text-muted-foreground hover:text-primary transition-colors duration-300"
-            >
-              <Download className="w-4 h-4 mr-2" />
-              Download Resume
-            </a>
-            <a
-              href="#about"
-              className="flex items-center text-muted-foreground hover:text-primary transition-colors duration-300"
-            >
-              Learn More About Me
-            </a>
-          </div>
+        </section>
+
+
+
+        {/* CTA Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <a
+            href="#projects"
+            className="group bg-primary text-primary-foreground px-8 py-4 rounded-xl font-semibold hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center"
+          >
+            <Code className="mr-2 w-5 h-5" />
+            View My Work
+            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+          </a>
+
+          <a
+            href="#contact"
+            className="group border-2 border-accent text-accent px-8 py-4 rounded-xl font-semibold hover:bg-accent hover:text-accent-foreground transition-all duration-300 flex items-center"
+          >
+            <TestTube className="mr-2 w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
+            Let's Work Together
+          </a>
         </div>
 
-        {/* Floating Achievement Cards */}
-        <div className="absolute top-1/4 left-8 glass-card p-4 animate-float delay-500 hidden lg:block">
-          <div className="text-primary font-bold">React Expert</div>
-          <div className="text-xs text-muted-foreground">Advanced Level</div>
+        {/* Quick Links */}
+        <div className="flex justify-center items-center space-x-8 pt-8">
+          {/* <a
+            href="https://drive.google.com/file/d/1ABC123XYZ456/view"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center text-muted-foreground hover:text-primary transition-colors duration-300"
+          >
+            <Download className="w-4 h-4 mr-2" />
+            Download Resume
+          </a> */}
+          <a
+            href="#about"
+            className="flex items-center text-muted-foreground hover:text-primary transition-colors duration-300"
+          >
+            Learn More About Me
+          </a>
         </div>
-        
-        <div className="absolute bottom-1/4 right-8 glass-card p-4 animate-float delay-700 hidden lg:block">
-          <div className="text-accent font-bold">QA Certified</div>
-          <div className="text-xs text-muted-foreground">ISTQB Foundation</div>
-        </div>
+      </div>
 
-        <div className="absolute top-1/2 left-4 glass-card p-4 animate-float delay-1000 hidden lg:block">
-          <div className="text-secondary font-bold">Node.js</div>
-          <div className="text-xs text-muted-foreground">Full Stack</div>
-        </div>
+      {/* Floating Achievement Cards */}
+      <div className="absolute top-1/4 left-8 glass-card p-4 animate-float delay-500 hidden lg:block">
+        <div className="text-primary font-bold">Shopify Expert</div>
+        <div className="text-xs text-muted-foreground">Advanced Level</div>
+      </div>
+    
 
-        <div className="absolute top-1/3 right-12 glass-card p-4 animate-float delay-1200 hidden lg:block">
-          <div className="text-primary font-bold">TypeScript</div>
-          <div className="text-xs text-muted-foreground">Expert Level</div>
-        </div>
+       <div className="absolute top-2/5 left-24 glass-card p-4 animate-float delay-700 hidden lg:block">
+        <div className="text-accent font-bold">Liquid Coding</div>
+        <div className="text-xs text-muted-foreground">Advanced Level</div>
+      </div>
+       <div className="absolute top-2/3 left-8 glass-card p-4 animate-float delay-500 hidden lg:block">
+        <div className="text-primary font-bold">Product Upload</div>
+        <div className="text-xs text-muted-foreground">Advanced Level</div>
+      </div>
 
-        <div className="absolute bottom-1/3 left-16 glass-card p-4 animate-float delay-1400 hidden lg:block">
-          <div className="text-accent font-bold">AWS Cloud</div>
-          <div className="text-xs text-muted-foreground">Solutions Architect</div>
-        </div>
+       <div className="absolute top-2/5 right-12 glass-card p-4 animate-float delay-500 hidden lg:block">
+        <div className="text-primary font-bold">Dropshipping</div>
+        <div className="text-xs text-muted-foreground">Advanced Level</div>
+      </div>
+   <div className="absolute top-1/4 right-12 glass-card p-4 animate-float delay-500 hidden lg:block">
+    
+        <div className="text-accent font-bold">Javascript</div>
+        <div className="text-xs text-muted-foreground">Advanced Level</div>
+      </div>
+       <div className="absolute top-2/3 right-12 glass-card p-4 animate-float delay-500 hidden lg:block">
+        <div className="text-accent font-bold">Theme Customization</div>
+        <div className="text-xs text-muted-foreground">Advanced Level</div>
       </div>
     </section>
   );
 };
 
 export default Hero;
+
+
+
+
+
+
+
+
