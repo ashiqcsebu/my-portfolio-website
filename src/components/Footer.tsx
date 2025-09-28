@@ -13,16 +13,17 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gradient-to-t from-background via-background/95 to-background/90 text-foreground relative overflow-hidden border-t border-border/50">
+    <footer className=" bg-gradient-to-t from-background via-background/95 to-background/90 text-foreground relative overflow-hidden border-t border-border/50">
       {/* Subtle background pattern */}
       <div className="absolute inset-0 bg-gradient-stellar opacity-30"></div>
 
       <div className="relative z-10 container mx-auto px-6 py-8">
         {/* Main Footer Content */}
+      
         <div className="grid md:grid-cols-3 gap-12 items-start">
 
           {/* Brand Section */}
-          <div className="space-y-6">
+          <div className="space-y-6 mx-auto">
             <div>
               <h3 className="text-2xl font-bold mb-3">
                 <span className="text-foreground">Ashiqul</span>
@@ -52,14 +53,14 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div className="space-y-6">
+          <div className="space-y-6 mx-auto">
             <h4 className="text-lg font-semibold text-foreground">Quick Links</h4>
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid gap-3">
               {quickLinks.map((link, index) => (
                 <a
                   key={index}
                   href={link.href}
-                  className="text-muted-foreground hover:text-accent transition-colors duration-300 text-sm hover:translate-x-1 transform"
+                  className="text-muted-foreground hover:text-accent transition-colors duration-300 text-sm  transform"
                 >
                   {link.label}
                 </a>
@@ -69,7 +70,7 @@ const Footer = () => {
 
           {/* Social Links */}
           <div className="space-y-6">
-            <h4 className="text-lg font-semibold text-foreground">Connect</h4>
+            <h4 className="text-lg font-semibold text-foreground">Follow me On</h4>
             <div className="flex space-x-4">
               <a
                 href="https://github.com/ashiqcsebu"
@@ -107,7 +108,7 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row justify-between items-center pt-2 mt-6 border-t border-border/50">
-          <div className="text-muted-foreground text-sm mb-4 md:mb-0">
+          <div className="text-muted-foreground text-sm mb-4 md:mb-0 mx-auto">
             © {new Date().getFullYear()} All rights reserved by Ashiqul Islam Shabu.
           </div>
 

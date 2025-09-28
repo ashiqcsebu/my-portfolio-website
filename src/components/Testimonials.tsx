@@ -128,6 +128,23 @@ const testimonials = [
   return (
     <section id='testimonials' className="section-padding bg-gradient-to-b from-secondary/30 to-background">
       <div className="container-luxury max-w-6xl mx-auto">
+
+   {/* Section Header */}
+        <div className="text-center space-y-6 mb-16 animate-fade-in-up">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-accent/10 text-accent text-sm font-medium">
+            ⭐ Client Success Stories
+          </div>
+          
+          <h2 className="text-4xl md:text-5xl font-bold">
+            What <span className="text-accent">Clients Say</span> About My Work
+          </h2>
+          
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            Real feedback from real clients who've experienced significant growth and success 
+            with their Shopify stores.
+          </p>
+        </div>
+
         {/* Testimonial Card */}
         <div
           className="glass-card p-8 md:p-12 space-y-8"

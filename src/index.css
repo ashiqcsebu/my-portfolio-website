@@ -189,10 +189,25 @@
 
   /* Premium Spacing */
   .section-padding {
-    @apply py-20 px-6 md:px-12 lg:px-20;
+    @apply pt-20 pb-10 px-6 md:px-12 lg:px-20;
   }
 
   .container-luxury {
     @apply max-w-7xl mx-auto;
   }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.marquee {
+  display: flex;
+  gap: 2rem; /* card space */
+  animation: marquee 20s linear infinite;
+  white-space: nowrap;
+}
+.marquee:hover {
+  animation-play-state: paused;
 }

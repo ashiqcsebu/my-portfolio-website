@@ -55,14 +55,14 @@ const About = () => {
       category: "Shopify Frontend Development",
       icon: <Code className="w-6 h-6" />,
       technologies: [
-        "Liquid",
+        "Shopify Liquid",
         "Javascript",
-        "HTML",
-        "CSS",
-        "Custom CSS",
-        "Shopify Themes",
         "Theme Customization",
-        "High Converting UI/UX",
+          "High Converting UI/UX",
+        "Responsive Design",
+        "Shopify Themes",
+          "HTML",
+        "Custom CSS",
       ],
     },
     {
@@ -70,15 +70,14 @@ const About = () => {
       icon: <ShoppingCart className="w-6 h-6" />,
       technologies: [
         "Shopify Apps",
-        "REST APIs",
         "Payment Gateway Integration",
         "Shipping & Tax Setup",
         "Dropshipping Integration",
         "Store Optimization",
-        "Data Entry",
         "Product Import",
         "Product Upload",
         "Bulk Product Management",
+          "Data Entry",
       ],
     },
     // {
@@ -241,7 +240,7 @@ const About = () => {
                         {skill.category}
                       </h4>
                     </div>
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap gap-2 ">
                       {skill.technologies.map((tech, techIndex) => (
                         <span
                           key={techIndex}
@@ -251,6 +250,10 @@ const About = () => {
                         </span>
                       ))}
                     </div>
+
+
+
+                    
                   </div>
                 ))}
               </div>
