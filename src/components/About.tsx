@@ -176,7 +176,7 @@ const About = () => {
                 <div className="flex items-center space-x-3">
                   <Calendar className="w-5 h-5 text-primary" />
                   <span className="text-muted-foreground">Experience:</span>
-                  <span className="font-semibold">2.5+ Years</span>
+                  <span className="font-semibold">1.5+ Years</span>
                 </div>
               </div>
 
@@ -190,6 +190,7 @@ const About = () => {
                 Download Resume
               </a> */}
             </div>
+            
           </div>
 
           {/* Skills & Bio */}
