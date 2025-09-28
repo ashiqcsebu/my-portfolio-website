@@ -5,7 +5,13 @@
     "category": "frontend",
     "description": "An AI-powered DeepSeek clone that replicates intelligent conversation features with a modern UI. It provides users with real-time responses, seamless navigation, and an interactive experience similar to AI assistants.",
     "image": "https://i.ibb.co/jk8bgJ9t/deepseek.png",
-    "technologies": ["Next.js", "React Hooks", "Tailwind CSS", "OpenAI API", "Vercel"],
+    "technologies": [
+      "Next.js",
+      "React Hooks",
+      "Tailwind CSS",
+      "OpenAI API",
+      "Vercel"
+    ],
     "liveUrl": "https://deepseek-clone-woad.vercel.app/",
     "githubUrl": "https://github.com/username/deepseek-clone",
     "featured": true
@@ -16,7 +22,15 @@
     "category": "fullstack",
     "description": "A mobile reselling platform that allows users to buy and sell second-hand devices. It includes product listings, search and filter functionality, user authentication, chat system, and integrated payment options for a secure marketplace experience.",
     "image": "https://i.ibb.co/pPnC2cC/swap.jpg",
-    "technologies": ["React.js", "Node.js", "Express.js", "Firebase Authentication", "Cloud Firestore", "Stripe API", "Tailwind CSS"],
+    "technologies": [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "Firebase Authentication",
+      "Cloud Firestore",
+      "Stripe API",
+      "Tailwind CSS"
+    ],
     "liveUrl": "https://swap-resell-website.web.app/",
     "githubUrl": "https://github.com/username/swap-resell",
     "featured": true
@@ -27,7 +41,13 @@
     "category": "fullstack",
     "description": "An online learning management system designed for students and teachers. Edu Hive offers live classes, interactive lessons, assignment submissions, progress tracking, and an engaging UI for easy navigation.",
     "image": "https://i.ibb.co/mtvtFZ2/eduhive.png",
-    "technologies": ["React.js", "Firebase Hosting", "Firestore Database", "Material-UI", "React Router"],
+    "technologies": [
+      "React.js",
+      "Firebase Hosting",
+      "Firestore Database",
+      "Material-UI",
+      "React Router"
+    ],
     "liveUrl": "https://edu-hive-5ffd0.web.app/",
     "githubUrl": "https://github.com/username/edu-hive",
     "featured": false
@@ -38,7 +58,13 @@
     "category": "fullstack",
     "description": "A book review website where users can explore books, write reviews, rate titles, and engage with a community of readers. Features include authentication, search and filter, and a clean user-friendly interface.",
     "image": "https://i.ibb.co/gw3nWFC/Review.jpg",
-    "technologies": ["React.js", "Firebase", "React Context API", "Tailwind CSS", "React Router"],
+    "technologies": [
+      "React.js",
+      "Firebase",
+      "React Context API",
+      "Tailwind CSS",
+      "React Router"
+    ],
     "liveUrl": "https://service-review-c7a94.web.app/",
     "githubUrl": "https://github.com/username/bookworm",
     "featured": true
@@ -49,7 +75,14 @@
     "category": "frontend",
     "description": "A workout monitoring application designed to help fitness enthusiasts track exercises, monitor progress, and visualize data with charts. It offers a responsive UI, authentication system, and real-time workout history logging.",
     "image": "https://i.ibb.co/SBP7p0F/gym.jpg",
-    "technologies": ["React.js", "Chart.js", "Firebase Firestore", "Firebase Auth", "Bootstrap", "Netlify"],
+    "technologies": [
+      "React.js",
+      "Chart.js",
+      "Firebase Firestore",
+      "Firebase Auth",
+      "Bootstrap",
+      "Netlify"
+    ],
     "liveUrl": "https://workout-activity-tracker.netlify.app/",
     "githubUrl": "https://github.com/username/fitness-xpress",
     "featured": false
@@ -60,7 +93,13 @@
     "category": "frontend",
     "description": "An interactive online quiz platform for programming learners. It includes timed quizzes, instant feedback, performance tracking, and a gamified experience to make coding practice fun and effective.",
     "image": "https://i.ibb.co/2PRpPhg/quiz.png",
-    "technologies": ["React.js", "React Router", "Netlify Deployment", "CSS Modules", "Local Storage"],
+    "technologies": [
+      "React.js",
+      "React Router",
+      "Netlify Deployment",
+      "CSS Modules",
+      "Local Storage"
+    ],
     "liveUrl": "https://programming-school-quiz-test.netlify.app/",
     "githubUrl": "https://github.com/username/programming-school",
     "featured": false
@@ -71,7 +110,13 @@
     "category": "shopify",
     "description": "Complete redesign of a Shopify store with modern UI, improved UX, and optimized product layout to increase conversion rates and user engagement.",
     "image": "https://i.ibb.co.com/BHr1ptjp/image-1.jpg",
-    "technologies": ["Shopify Theme", "Liquid Coding","JavaScript", "HTML", "CSS"],
+    "technologies": [
+      "Shopify Theme",
+      "Liquid Coding",
+      "JavaScript",
+      "HTML",
+      "CSS"
+    ],
     "liveUrl": "https://crazystrainstees.com/",
     "githubUrl": "#",
     "featured": true
@@ -80,9 +125,9 @@
     "id": 8,
     "title": "Dropshipping Store Setup",
     "category": "shopify",
-    "description": "Full store deisgn and setup of a dropshipping store including product sourcing, listing, pricing, shipping setup, and store configuration for seamless operations.",
-    "image": "https://i.ibb.co.com/p64cpjjv/image-2.jpg",
-    "technologies": ["Shopify", "Oberlo", "AliExpress", "Liquid", "SEO"],
+    "description": "Complete store deisgn from scratch and setup of a DSers dropshipping store including product sourcing, listing, pricing, shipping setup, and store configuration for seamless operations.",
+    "image": "https://i.ibb.co.com/jkWJPWHY/4.jpg",
+    "technologies": ["Shopify", "DSers", "AliExpress", "Liquid", "SEO"],
     "liveUrl": "https://q1b1kj-zf.myshopify.com/",
     "githubUrl": "#",
     "featured": true
@@ -91,7 +136,7 @@
     "id": 9,
     "title": "Shopify Store from  Scratch",
     "category": "shopify",
-    "description": "Enhanced store SEO by optimizing product pages, meta tags, alt texts, and URLs to increase organic traffic and improve search engine rankings.",
+    "description": "Store designed from scratch and manually product uploaded with different variants with prebooking system and store configuration for seamless operations.",
     "image": "https://i.ibb.co.com/PzYC6fcZ/image-3.jpg",
     "technologies": ["Shopify", "SEO Tools", "Liquid", "Google Analytics"],
     "liveUrl": "https://pkpouchenergy.com/",
@@ -111,7 +156,7 @@
   },
   {
     "id": 11,
-    "title": "Custom Single Product Store in Spanish",
+    "title": "Custom Single Product Store in (English and Spanish)",
     "category": "shopify",
     "description": "Built a fully customized Shopify store using Pagebuilder(Pagefly, Gempage) tailored to brand requirements, responsive design, interactive elements, and optimized performance manually translated in Spanish.",
     "image": "https://i.ibb.co.com/93rDcLq8/image-5.jpg",
@@ -122,9 +167,9 @@
   },
   {
     "id": 12,
-    "title": "Wordpress to Shopify Store Migration",
+    "title": "Wordpress to Shopify Store Migration (Spanish)",
     "category": "shopify",
-    "description": "Migrated existing e-commerce stores to Shopify with full data transfer, theme adaptation, SEO preservation, and functional improvements.",
+    "description": "Migrated existing e-commerce store to Shopify with full data transfer, theme adaptation, SEO preservation, and functional improvements.",
     "image": "https://i.ibb.co.com/3gxZBKN/image-6.jpg",
     "technologies": ["Shopify", "Liquid", "CSV Import", "SEO"],
     "liveUrl": "https://casadeeva.com/",
@@ -159,7 +204,12 @@
     "category": "shopify",
     "description": "Improved store loading speed and performance by optimizing images, code, and apps for better user experience and higher SEO ranking.",
     "image": "https://i.ibb.co.com/XxY29Snw/image-9.jpg",
-    "technologies": ["Theme Customization", "Liquid", "Performance Tools", "SEO"],
+    "technologies": [
+      "Theme Customization",
+      "Liquid",
+      "Performance Tools",
+      "SEO"
+    ],
     "liveUrl": "https://primalqueen.com/",
     "githubUrl": "#",
     "featured": false
@@ -203,7 +253,7 @@
     "category": "shopify",
     "description": "Created promotional and marketing pages for campaigns, product launches, and seasonal offers with visually appealing layouts.",
     "image": "https://i.ibb.co.com/SDDrDngB/imahe-13.jpg",
-    "technologies": [ "Liquid Coding", "Theme Customization", "JavaScript"],
+    "technologies": ["Liquid Coding", "Theme Customization", "JavaScript"],
     "liveUrl": "https://makya.de/",
     "githubUrl": "#",
     "featured": false

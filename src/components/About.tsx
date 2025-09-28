@@ -11,6 +11,7 @@ import {
   ShoppingCart,
   SettingsIcon,
   Bug,
+  School2Icon
 } from "lucide-react";
 import { useState } from "react";
 import certificate1 from "../assets/reviews/Certificate.png";
@@ -154,7 +155,7 @@ const About = () => {
                   <span className="font-semibold">Ashiqul Islam Shabu</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <MapPin className="w-5 h-5 text-primary" />
+                  <School2Icon className="w-5 h-5 text-primary" />
                   <span className="text-muted-foreground">Education</span>
                   <span className="font-semibold">
                     BSc in Computer Science & Engineering.
