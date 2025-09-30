@@ -150,7 +150,7 @@ const Hero = () => {
       </section>
 
       {/* Floating Achievement Cards - Mobile/Tablet Marquee */}
-      <div className="block lg:hidden w-full overflow-hidden mt-10">
+      <div className="block lg:hidden w-full overflow-hidden ">
         <div className="marquee">
           {[
             "Shopify Expert",
