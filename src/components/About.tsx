@@ -2,7 +2,6 @@ import {
   User,
   Code,
   Award,
-  Download,
   MapPin,
   Mail,
   Calendar,
@@ -11,12 +10,12 @@ import {
   ShoppingCart,
   SettingsIcon,
   Bug,
-  School2Icon
+  School2Icon,
+  LanguagesIcon
 } from "lucide-react";
 import { useState } from "react";
 import certificate1 from "../assets/reviews/Certificate.png";
 import certificate2 from "../assets/reviews/Certificcate_page.jpg";
-import certificate3 from "../assets/reviews/joining poster.jpg";
 import certificate4 from "../assets/reviews/programming hero expertise.jpg";
 
 const achievements = [
@@ -59,10 +58,10 @@ const About = () => {
         "Shopify Liquid",
         "Javascript",
         "Theme Customization",
-          "High Converting UI/UX",
+        "High Converting UI/UX",
         "Responsive Design",
         "Shopify Themes",
-          "HTML",
+        "HTML",
         "Custom CSS",
       ],
     },
@@ -78,7 +77,7 @@ const About = () => {
         "Product Import",
         "Product Upload",
         "Bulk Product Management",
-          "Data Entry",
+        "Data Entry",
       ],
     },
     // {
@@ -179,6 +178,18 @@ const About = () => {
                   <span className="text-muted-foreground">Experience:</span>
                   <span className="font-semibold">1.5+ Years</span>
                 </div>
+                <div className="flex items-center space-x-3">
+                  <LanguagesIcon className="w-5 h-5 text-primary" />
+                  <span className="text-muted-foreground">Languages:</span>
+                  <div>
+                    <span className="font-semibold">Bengali (Native)</span>
+                    <br />
+                    <span className="font-semibold">English (Conversational) </span>
+                  </div>
+
+                  <br />
+
+                </div>
               </div>
 
               {/* <a
@@ -191,7 +202,7 @@ const About = () => {
                 Download Resume
               </a> */}
             </div>
-            
+
           </div>
 
           {/* Skills & Bio */}
@@ -204,26 +215,15 @@ const About = () => {
                 style={{ textAlign: "justify" }}
               >
                 <p>
-                  I completed my BSc in CSE and am a passionate full-stack
-                  developer with 5+ years of experience in JavaScript, React,
-                  and Node.js. I specialize in Shopify development, combining
-                  coding expertise with e-commerce strategies to create
-                  high-performing, user-friendly online stores that drive real
-                  business growth.
+                  I completed my <span className="text-accent">BSc in CSE</span> and am a passionate full-stack developer with over 5 years of experience in JavaScript, React, and Node.js. I specialize in <span className="text-accent">Shopify development</span>, combining coding skills with e-commerce strategies to create high-performing, user-friendly online stores that drive real business growth.
                 </p>
                 <p>
-                  I have worked with startups and established brands to
-                  transform ideas into thriving e-commerce platforms. My
-                  expertise includes Shopify store setup, theme customization,
-                  app integration, dropshipping solutions, SEO, and performance
-                  optimization. I focus on building responsive,
-                  conversion-driven stores that deliver measurable results and
-                  long-term client success.
+                  I have worked with startups and established brands to transform ideas into thriving e-commerce platforms. My expertise includes <span className="text-accent"> Shopify store setup, theme customization, app integration, dropshipping solutions, SEO, and performance optimization.</span>  I focus on building responsive, conversion-driven stores that deliver measurable results. I am <span className="text-accent">IELTS certified and proficient in English </span>and Bengali, ensuring clear communication with clients globally.
                 </p>
+
+
               </div>
             </div>
-
-            {/* Skills */}
             <div className="space-y-6">
               <h3 className="text-2xl font-bold text-foreground">
                 Skills & Expertise
@@ -255,7 +255,7 @@ const About = () => {
 
 
 
-                    
+
                   </div>
                 ))}
               </div>
