@@ -9,7 +9,7 @@ const Hero = () => {
     <>
       <section
         id="home"
-        className="min-h-screen md:min-h-[50vh] flex items-center justify-center relative overflow-hidden"
+        className="min-h-[75vh] md:min-h-[50vh] flex items-center justify-center relative overflow-hidden"
       >
         {/* Floating Background Elements */}
         <div className="absolute top-20 left-10 w-20 h-20 bg-primary/10 rounded-full blur-xl animate-float"></div>

@@ -154,9 +154,9 @@ export default {
       },
       minHeight: {
         // % based
-        "screen-90": "90vh",
         "screen-80": "80vh",
-        "screen-75": "75vh",
+        "screen-70": "70vh",
+        "screen-60": "60vh",
         "screen-50": "50vh",
 
         // calc based
